@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MTU</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/ed1f127768f84ec790fb3d40370d84af/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/common-ba7a744043.css">
+  <link rel="stylesheet" media="all" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/wiki_page-46e7e026f6.css">
+  <link rel="stylesheet" media="all" href="css/custom.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+
+    body{ font-family: 'Merriweather', serif; color: #27333b; padding:20px; }
+    *{ box-sizing: border-box; }
+    .title{ font-size: 30px; color: #000; font-family: 'Lato', sans-serif; font-weight: 800; margin: 0; }
+    .description{ font-size: 16px; color: #000; font-family: 'Lato', sans-serif; }
+    .highlight{ background: yellow; }
+    .highlight-pink{ background: pink; }
+    .highlight-blue{ background: lightblue; }
+    .highlight-orange{ background: orange; }
+    .red{ color: red; }
+    code, pre{ font-size: 1em; }
+    pre{ background: #f2f2f2; overflow-x: scroll; white-space: pre; }
+    .accordion-title:hover, .accordion-title:focus{ text-decoration: none; }
+	code { color: #333; border:1px solid #ccc; margin:0 4px; border-radius: 4px; }
+    .feedback-quiz .quiz-instruction { font-size:18px; margin-bottom:5px; }
+    @font-face{
+      font-family: "Gotham";
+      src: url('fonts/Gotham-Bold.eot') format('embedded-opentype'), url('fonts/Gotham-Bold.woff') format('woff'),
+      url('fonts/Gotham-Bold.ttf') format('truetype');
+    	font-weight: bold;
+    }
+
+    @font-face{
+      font-family: "Gotham";
+      src: url('fonts/Gotham-Book.eot') format('embedded-opentype'), url('fonts/Gotham-Book.woff') format('woff'),
+      url('fonts/Gotham-Book.ttf') format('truetype');
+    }
+
+    @font-face{
+      font-family: "Lucida";
+      src: url('fonts/LucidaBright.eot') format('embedded-opentype'), url('fonts/LucidaBright.woff') format('woff'),
+      url('fonts/LucidaBright.ttf') format('truetype');
+    }
+
+    @font-face{
+      font-family: "Lucida";
+      src: url('fonts/LucidaBright-DemiItalic.eot') format('embedded-opentype'), url('fonts/LucidaBright-DemiItalic.woff') format('woff'),
+      url('fonts/LucidaBright-DemiItalic.ttf') format('truetype');
+      font-style: italic;
+    }
+
+    @font-face{
+      font-family: "Archer";
+      src: url('fonts/Archer-Bold.eot') format('embedded-opentype'), url('fonts/Archer-Bold.woff') format('woff'),
+      url('fonts/Archer-Bold.ttf') format('truetype');
+      font-style: italic;
+    }
+
+    *, .pagination .mtu-button, .pagination .mtu-button:hover{
+      font-family: 'Lucida';
+      font-weight: bold;
+    }
+
+    .fillblanks .mtu-button{
+      font-family: 'Gotham';
+    }
+
+    .pagination .mtu-button.current{
+      background: #142f53;
+      color: white;
+    }
+
+    button[type="submit"], .next, .show-answers, .back, .hint-box .btn{
+      background: #996807;
+      color: white;
+    }
+
+    .fillblanks .answer, .mtu-button:hover{
+      border: 3px solid #996807;
+    }
+
+    .mtu-button:hover, .fillblanks .mtu-button[disabled]{
+      color: black;
+    }
+
+    .feedback-quiz .feedback-message:after{
+      opacity: 0.4;
+      bottom: 1.5em;
+      right: 1.5em;
+    }
+
+    .mtu-button{
+      background: #996807;
+      color: white;
+    }
+
+    .title{
+      color: #142f53;
+      font-family: 'Archer';
+      font-size: 2.5em;
+    }
+
+    .feedback-quiz .feedback-message{
+      padding: 1em 2em;
+      margin: 2em 0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+
+<!-- Quiz -->
+<div class="snippet-item">
+
+  <div class="feedback-quiz">
+    <div class="click-reveal-container">
+
+    <!-- Question 1 -->
+    <div class="question">
+      <div class="quiz-instruction">1. What type of variable is "Telephone Area Code"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, nominal"  The reason is because a phone number isn't really a "number", but is basically like the "name" of the phone you want to call.</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <div class="quiz-instruction">2. What type of variable is "Satisfaction"?</div>
+       <p>This variable is measured as (1) Very dissatisfied, (2) Somewhat dissatisfied, (3) Neither satisfied nor dissatisfied, (4) Somewhat satisfied, (5) Very satisfied.</p>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+	  
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, ordinal".</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <div class="quiz-instruction">3. What type of variable is "Weight: _______ Pounds"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "numerical, ratio".  Weight is measured as a continuous numeric variable.</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+
+    <!-- Question 4 -->
+    <div class="question">
+      <div class="quiz-instruction">4. What type of variable is the following?</div>
+      <p>Are you a practicing nurse?</p>
+      <p>
+	  - Yes. I see patients regularly.<br/> 
+	  - No. I am a full-time student pursuing advance degree(s).<br/>
+	  - I work full-time in research and do not regularly see patients.<br/>
+	  - I teach at a university or college and do not regularly see patients.<br/> 
+	  - I am retired.<br/> 
+	  - I am currently unemployed.<br/>
+	  </p>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, nominal".</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <div class="quiz-instruction">5. What type of variable is "Procedure code:_____________"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, nominal". A procedure code may be formatted like a number, but it's actually the "name" of the procedure.</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+      <div class="quiz-instruction">6. What type of variable is "Time of day:___________"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "numerical, interval". The time of day (ie, clock time) is measured as a continuous numeric variable. Other measures of time (ie, hours since X) would be measured as discrete numeric variables."</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+      <div class="quiz-instruction">7. What type of variable is "Number of physician visits annually: __________"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "numerical, ratio". Number of X is measured as a discrete numeric variable.</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+      <div class="quiz-instruction">8. What type of variable is "Length of time to regain consciousness after general anesthesia:____________"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "numerical, ratio". Time since X could be measured as a continuous numeric variable (ie, elapsed time on a stopwatch) or as a discrete numeric variable (ie, minutes/hours/days that have passed).  It's important to know which one is which before you start doing calculations!"</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+      <div class="quiz-instruction">9. What type of variable is "Clinical Units: Cardiology, Orthopedics, Medicine"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, nominal".</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+      <div class="quiz-instruction">10. What type of variable is "Ethnicity"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, nominal".</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question">
+      <div class="quiz-instruction">11. What type of variable is "Income"?</div>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "numerical, interval". Income is an interval measurement because, alas, it could be a negative number. If you measure income as a raw currency amount (eg, $27,933), then the variable is continuous.  Careful though!  Income is often measured in ranges - like you would see on a survey (eg, $25k to $50k, $50k to $75k, etc.), and if you do it that way, it's an categorical, ordinal variable.</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+      <div class="quiz-instruction">12. What type of variable is "Who owns the facility in which you work"?</div>
+      <p>1) A hospital or health system, 2) A doctor or group of doctors, 3) A nurse practitioner or group of nurse practitioners, 4) A company or corporation</p>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, nominal".</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+      <div class="quiz-instruction">13. What type of variable is "Patient rating of their overall hospital stay"?</div>
+      <p>Patients rate their stay on a scale: 1 (low) - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 (high)</p>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "categorical, ordinal".</p>
+      </div>
+      <div class="btn mtu-button layer-button next">Next</div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+      <div class="quiz-instruction">14. What type of variable is the "Liebowitz Social Anxiety Scale (SAD): ___________"?</div>
+      <p>? This scale varies from 0 to 100, where a score <30 SAD is unlikely, between 60 and 90 SAD is very probable, and >90 SAD is highly probable.</p>
+
+      <div class="kp-row answers">
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">numerical, interval</div> 
+		  </div>
+        <div class="kp-col-12">
+          <div class="answer correct correct-icon" tabindex="0">numerical, ratio</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, nominal</div>
+        </div>
+        <div class="kp-col-12">
+          <div class="answer incorrect-icon" tabindex="0">categorical, ordinal</div>
+        </div>
+      </div>
+
+      <div class="feedback-message">
+        <p>The correct answer is "numerical, ratio."</p>
+        <p>This is a trick one!  On first glance, this seems like it's categorical. But we're told that the scale varies from 0 to 100, so we can infer that it's numerical - though it's not clear whether the values are discrete (eg, 1, 2, 3...) or continuous (eg, taking a value like 63.21).</p>
+      </div>
+    <div class="btn mtu-button layer-button retry">Retry</div>
+    </div>
+
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <script src="js/custom.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+          processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+      });
+  </script>
+</body>
+</html>
